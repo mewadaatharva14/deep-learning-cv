@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Data & model files
+data/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & outputs
+*.log
+runs/
+assets/loss_curves/

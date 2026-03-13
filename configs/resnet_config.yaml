@@ -1,0 +1,31 @@
+model:
+  name: "ResNet50Transfer"
+  num_classes: 10
+  pretrained: true
+  dropout: 0.3
+
+  feature_extraction:
+    epochs: 5
+    learning_rate: 0.001
+    freeze_backbone: true
+
+  fine_tuning:
+    epochs: 10
+    learning_rate: 0.0001
+    unfreeze_layers: ["layer3", "layer4"]
+
+data:
+  dataset: "CIFAR10"
+  data_dir: "data/"
+  image_size: 224
+  num_workers: 2
+
+training:
+  batch_size: 32
+  weight_decay: 0.0001
+  optimizer: "adam"
+  scheduler: "cosine"
+  checkpoint_dir: "checkpoints/"
+
+logging:
+  print_every: 100

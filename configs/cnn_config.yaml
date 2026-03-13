@@ -1,0 +1,22 @@
+model:
+  name: "CustomCNN"
+  num_classes: 10
+  dropout: 0.3
+
+data:
+  dataset: "CIFAR10"
+  data_dir: "data/"
+  image_size: 32
+  num_workers: 2
+
+training:
+  epochs: 15
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: "adam"
+  scheduler: "cosine"
+  checkpoint_dir: "checkpoints/"
+
+logging:
+  print_every: 100
